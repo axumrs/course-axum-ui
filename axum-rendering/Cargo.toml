@@ -12,3 +12,4 @@ sqlx.workspace = true
 chrono.workspace = true
 db = { path = "../db" }
 axum_ui = { path = "../" }
+askama = "0.15.6"
