@@ -1,0 +1,19 @@
+[package]
+name = "axum_ui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sqlx.workspace = true
+
+[workspace]
+members = [".", "axum-rendering", "db"]
+resolver = "3"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "0.8"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.8", features = ["runtime-tokio", "postgres", "chrono"] }
+chrono = { version = "0.4", features = ["serde"] }

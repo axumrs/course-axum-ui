@@ -1,0 +1,14 @@
+[package]
+name = "axum-rendering"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio.workspace = true
+axum.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+sqlx.workspace = true
+chrono.workspace = true
+db = { path = "../db" }
+axum_ui = { path = "../" }
