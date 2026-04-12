@@ -7,7 +7,7 @@ edition = "2024"
 sqlx.workspace = true
 
 [workspace]
-members = [".", "axum-rendering", "db"]
+members = [".", "axum-rendering", "db", "front-back-separation"]
 resolver = "3"
 
 [workspace.dependencies]
