@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 76, "column": 0}, "map": {"version":3,"sources":["file:///home/ace/course-projects/axum-ui/hydration-ui/proxy.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\n\nexport function proxy(request: Request) {\n  if (request.url.startsWith(\"/api\")) {\n    const rewriteUrl = new URL(\"http://172.29.101.146:9527\");\n    return NextResponse.rewrite(rewriteUrl);\n  }\n}\n"],"names":["proxy","request","url","startsWith","rewriteUrl","URL","rewrite"],"mappings":";;;;AAAA;;AAEO,SAASA,MAAMC,OAAgB;IACpC,IAAIA,QAAQC,GAAG,CAACC,UAAU,CAAC,SAAS;QAClC,MAAMC,aAAa,IAAIC,IAAI;QAC3B,OAAO,6QAAY,CAACC,OAAO,CAACF;IAC9B;AACF"}}]
-}
