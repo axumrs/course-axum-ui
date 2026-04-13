@@ -1,5 +1,5 @@
 use axum::{Router, routing::get};
-use front_back_separation::handler;
+use front_back_separation::{asset, handler};
 use tokio::net::TcpListener;
 
 use axum_ui::{ArcAppState, new_arc_state};
@@ -22,7 +22,9 @@ async fn main() -> anyhow::Result<()> {
         .await?;
     let state = new_arc_state(pool);
 
-    let app = Router::new().nest("/api", router_init(state));
+    let app = Router::new()
+        .nest("/api", router_init(state))
+        .fallback(asset::static_handler);
 
     axum::serve(listener, app).await?;
     Ok(())

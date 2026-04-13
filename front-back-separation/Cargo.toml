@@ -12,3 +12,5 @@ sqlx.workspace = true
 chrono.workspace = true
 db = { path = "../db" }
 axum_ui = { path = "../" }
+rust-embed = "8.11.0"
+mime_guess = "2.0.5"
